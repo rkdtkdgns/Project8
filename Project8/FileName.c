@@ -1,8 +1,8 @@
 #include <stdio.h>
 int main()
 {
-	int 스트라이크, 아웃, 베이스 = 0;
-	int a, b, d, i = 0;
+	int 스트라이크 = 0, 아웃 = 0, 볼 = 0;
+	int a = 0, b = 0, d = 0, i = 0;
 		printf("숫자야구");
 		printf("\n");
 		srand(time(NULL));
@@ -10,17 +10,23 @@ int main()
 		{
 			int random = rand() % 5;
 			printf("%d ", random);
+			int i;
 		}
-			for (a=1; a<8; a++)
+			for (a=0; a<8; a++)
 			{
-				do
-				{
-					printf("라운드:%d\n", a++);
-					scanf("%d", &d);
+					printf("라운드:%d\n", a+1);
+					scanf("%03d", &d);
 					printf("\n");
-				}while (d > 0.001);
-				printf("다시 작성하세요");
-				printf("\n");
-			
+					if (i<9)
+					{
+						d = i;
+						printf("스트라이크:%d\n", 스트라이크++);
+					}
+					else 
+					{
+						d > i;
+						d < i;
+						printf("아웃:%d\n", 아웃++);
+					}
 			}
 }
